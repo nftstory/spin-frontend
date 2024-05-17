@@ -2,8 +2,7 @@ import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
 import { cookieStorage, createStorage } from 'wagmi'
 import { base } from 'wagmi/chains'
 
-// export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
-export const projectId = '6943b900e094b7dc40edf3cb3b14957e'
+export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
 
 if (!projectId) throw new Error('Project ID is not defined')
 
