@@ -1,0 +1,9 @@
+.spin {
+    width: 100%;
+    height: auto;
+    min-height: 78svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
