@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 import { cookieToInitialState } from "wagmi";
 import { headers } from "next/headers";
 import Web3ModalProvider from "@/context/Web3ModalProvider";
+import Navbar from "@/components/navbar/Navbar";
+import { font } from "./fonts";
 
 export const metadata: Metadata = {
     title: "Spin",
@@ -17,8 +19,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
 
     return (
         <html lang="en">
-            <body>
+            <body className={font.className}>
                 <Web3ModalProvider initialState={initialState}>
+                    <Navbar />
                     {children}
                 </Web3ModalProvider>
             </body>
