@@ -8,6 +8,7 @@ import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import { State, WagmiProvider } from 'wagmi'
+import { font } from '@/app/fonts'
 
 const queryClient = new QueryClient()
 
@@ -17,7 +18,10 @@ createWeb3Modal({
     wagmiConfig: config,
     projectId,
     enableAnalytics: true,
-    enableOnramp: true
+    enableOnramp: true,
+    themeVariables: {
+        '--w3m-font-family': 'main'
+    }
 })
 
 export default function Web3ModalProvider({
